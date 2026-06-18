@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodesk IT | Engineering the Future of Digital Innovation</title>
+    <meta name="description" content="We help businesses accelerate growth through AI-powered software solutions, cloud infrastructure, and engineering excellence.">
+    <meta name="theme-color" content="#05070D">
+    <link rel="canonical" href="https://www.prodeskit.com/">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Prodesk IT | Engineering the Future of Digital Innovation">
+    <meta property="og:description" content="We help businesses accelerate growth through AI-powered software solutions, cloud infrastructure, and engineering excellence.">
+    <meta property="og:url" content="https://www.prodeskit.com/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon (inline SVG monogram, no external asset required) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0F19'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='32' font-weight='800' fill='%23F4C542' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+
+    <!--
+        IMPORTANT: This template no longer depends on external image files
+        (the original "download.jpg" / "download (1).jpg" references were
+        broken because those files were never provided). The logo is now an
+        inline SVG and the About section uses a CSS panel as a placeholder.
+        Swap in real photography by replacing the elements marked
+        "REPLACE WITH REAL ASSET" below.
+    -->
+
+    <!-- Theme: applied BEFORE first paint to avoid a flash of the wrong theme -->
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('prodesk-theme');
+                var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+                var theme = stored || (prefersLight ? 'light' : 'dark');
+                document.documentElement.classList.add(theme);
+            } catch (e) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind is precompiled below (no runtime CDN dependency: works
+         offline, behind ad-blockers/firewalls, and regardless of file
+         structure). Regenerate with the Tailwind CLI if classes change. -->
+    <style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.-inset-1{inset:-.25rem}.-left-24{left:-6rem}.-top-24{top:-6rem}.left-0{left:0}.left-1\/4{left:25%}.right-1\/4{right:25%}.top-0{top:0}.top-\[120vh\]{top:120vh}.top-full{top:100%}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-2{height:.5rem}.h-48{height:12rem}.h-6{height:1.5rem}.h-96{height:24rem}.h-\[450px\]{height:450px}.h-\[500px\]{height:500px}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-1{width:.25rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-2{width:.5rem}.w-48{width:12rem}.w-6{width:1.5rem}.w-96{width:24rem}.w-\[500px\]{width:500px}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-lg{max-width:32rem}.max-w-xl{max-width:36rem}@keyframes ping{75%,to{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0,0,.2,1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-gold{--tw-border-opacity:1;border-color:rgb(244 197 66/var(--tw-border-opacity,1))}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/5{border-color:hsla(0,0%,100%,.05)}.bg-accent\/5{background-color:rgba(255,107,53,.05)}.bg-bgDark{--tw-bg-opacity:1;background-color:rgb(5 7 13/var(--tw-bg-opacity,1))}.bg-bgDark\/40{background-color:rgba(5,7,13,.4)}.bg-bgDark\/70{background-color:rgba(5,7,13,.7)}.bg-bgDark\/95{background-color:rgba(5,7,13,.95)}.bg-gold{--tw-bg-opacity:1;background-color:rgb(244 197 66/var(--tw-bg-opacity,1))}.bg-gold\/10{background-color:rgba(244,197,66,.1)}.bg-gold\/20{background-color:rgba(244,197,66,.2)}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-white\/\[0\.01\]{background-color:hsla(0,0%,100%,.01)}.bg-white\/\[0\.02\]{background-color:hsla(0,0%,100%,.02)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-gold{--tw-gradient-from:#f4c542 var(--tw-gradient-from-position);--tw-gradient-to:rgba(244,197,66,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-white{--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#fff var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-accent{--tw-gradient-to:#ff6b35 var(--tw-gradient-to-position)}.to-white\/\[0\.01\]{--tw-gradient-to:hsla(0,0%,100%,.01) var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.p-12{padding:3rem}.p-2{padding:.5rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-8{padding-bottom:2rem}.pl-4{padding-left:1rem}.pt-16{padding-top:4rem}.pt-24{padding-top:6rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.font-heading{font-family:Poppins,sans-serif}.font-sans{font-family:Inter,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.not-italic{font-style:normal}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-bgDark{--tw-text-opacity:1;color:rgb(5 7 13/var(--tw-text-opacity,1))}.text-gold{--tw-text-opacity:1;color:rgb(244 197 66/var(--tw-text-opacity,1))}.text-mutedText{--tw-text-opacity:1;color:rgb(170 179 197/var(--tw-text-opacity,1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-20{opacity:.2}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-gold\/20{--tw-shadow-color:rgba(244,197,66,.2);--tw-shadow:var(--tw-shadow-colored)}.blur{--tw-blur:blur(8px)}.blur,.blur-3xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px)}.blur-\[120px\]{--tw-blur:blur(120px)}.blur-\[120px\],.blur-\[150px\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-\[150px\]{--tw-blur:blur(150px)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px)}.backdrop-blur-lg,.backdrop-blur-md{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-1000{transition-duration:1s}.duration-300{transition-duration:.3s}.selection\:bg-gold\/30 ::-moz-selection{background-color:rgba(244,197,66,.3)}.selection\:bg-gold\/30 ::selection{background-color:rgba(244,197,66,.3)}.selection\:text-gold ::-moz-selection{--tw-text-opacity:1;color:rgb(244 197 66/var(--tw-text-opacity,1))}.selection\:text-gold ::selection{--tw-text-opacity:1;color:rgb(244 197 66/var(--tw-text-opacity,1))}.selection\:bg-gold\/30::-moz-selection{background-color:rgba(244,197,66,.3)}.selection\:bg-gold\/30::selection{background-color:rgba(244,197,66,.3)}.selection\:text-gold::-moz-selection{--tw-text-opacity:1;color:rgb(244 197 66/var(--tw-text-opacity,1))}.selection\:text-gold::selection{--tw-text-opacity:1;color:rgb(244 197 66/var(--tw-text-opacity,1))}.hover\:-translate-y-2:hover{--tw-translate-y:-0.5rem}.hover\:-translate-y-2:hover,.hover\:scale-105:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05}.hover\:bg-white\/10:hover{background-color:hsla(0,0%,100%,.1)}.hover\:bg-white\/5:hover{background-color:hsla(0,0%,100%,.05)}.hover\:bg-white\/\[0\.03\]:hover{background-color:hsla(0,0%,100%,.03)}.hover\:text-gold:hover{--tw-text-opacity:1;color:rgb(244 197 66/var(--tw-text-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-gold:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(244 197 66/var(--tw-ring-opacity,1))}.group:hover .group-hover\:rotate-12{--tw-rotate:12deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-gold{--tw-bg-opacity:1;background-color:rgb(244 197 66/var(--tw-bg-opacity,1))}.group:hover .group-hover\:text-bgDark{--tw-text-opacity:1;color:rgb(5 7 13/var(--tw-text-opacity,1))}.group:hover .group-hover\:opacity-40{opacity:.4}@media (min-width:640px){.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}@media (min-width:1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.lg\:text-7xl{font-size:4.5rem;line-height:1}}
+    </style>
+    <style>
+/* Core Settings */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Respect users who have asked their OS to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link (keyboard accessibility) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: #F4C542;
+  color: #05070D;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Visible keyboard focus everywhere interactive */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #F4C542;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Premium Card Glassmorphism Engine */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card:hover {
+  border-color: rgba(244, 197, 66, 0.3);
+  box-shadow: 0 20px 40px -15px rgba(5, 7, 13, 0.7), 0 0 30px 0 rgba(244, 197, 66, 0.05);
+}
+
+/* About-section placeholder panel (stands in until a real photo is supplied) */
+.about-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(244, 197, 66, 0.18), transparent 55%),
+    linear-gradient(135deg, #11162a 0%, #0B0F19 60%, #05070D 100%);
+  color: rgba(244, 197, 66, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Scroll Active Reveals */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigation State Scrolling */
+.navbar-scrolled {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  background: rgba(5, 7, 13, 0.85) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ==========================================================================
+   LIGHT MODE DEFINITIONS (Explicit Override Framework)
+   ========================================================================== */
+html.light {
+  background-color: #F8FAFC !important;
+}
+html.light body {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+/* Header Adjustments */
+html.light header {
+  background: rgba(248, 250, 252, 0.8) !important;
+  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+}
+html.light .navbar-scrolled {
+  background: rgba(248, 250, 252, 0.95) !important;
+}
+html.light .logo-text,
+html.light .mobile-menu-toggle {
+  color: #0F172A !important;
+}
+html.light .nav-link {
+  color: #475569 !important;
+}
+html.light .nav-link:hover {
+  color: #F4C542 !important;
+}
+html.light .active-nav {
+  color: #0F172A !important;
+}
+/* Typography Overrides */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light .text-white,
+html.light .stat-num,
+html.light .industry-card span,
+html.light .why-card h3 {
+  color: #0F172A !important;
+}
+html.light .text-mutedText {
+  color: #475569 !important;
+}
+/* Card Elements Overrides */
+html.light .glass-card,
+html.light .industry-card,
+html.light .why-card {
+  background: rgba(15, 23, 42, 0.02) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+}
+html.light .glass-card:hover {
+  background: rgba(15, 23, 42, 0.03) !important;
+  border-color: rgba(244, 197, 66, 0.5) !important;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08) !important;
+}
+html.light .why-card {
+  background: #FFFFFF !important;
+}
+html.light .about-panel {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(244, 197, 66, 0.25), transparent 55%),
+    linear-gradient(135deg, #EEF2F7 0%, #E2E8F0 100%) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  color: rgba(15, 23, 42, 0.25) !important;
+}
+html.light .border-btn {
+  border-color: rgba(15, 23, 42, 0.15) !important;
+  color: #0F172A !important;
+}
+html.light .border-btn:hover {
+  background: rgba(15, 23, 42, 0.05) !important;
+}
+/* Footer Contrast Lock */
+html.light footer {
+  background-color: #0B0F19 !important;
+  border-top-color: transparent !important;
+}
+html.light footer p,
+html.light footer span,
+html.light footer a {
+  color: #AAB3C5 !important;
+}
+html.light footer a:hover {
+  color: #F4C542 !important;
+}
+html.light .footer-logo,
+html.light .footer-head,
+html.light .footer-sub {
+  color: #FFFFFF !important;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-bgDark text-white font-sans antialiased selection:bg-gold/30 selection:text-gold overflow-x-hidden transition-colors duration-300">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Glowing Background Orbs -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-gold/10 rounded-full filter blur-[120px] pointer-events-none animate-pulse" aria-hidden="true"></div>
+    <div class="absolute top-[120vh] right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full filter blur-[150px] pointer-events-none" aria-hidden="true"></div>
+
+    <!-- Header / Sticky Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-white/5 py-4 backdrop-blur-md bg-bgDark/70">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-gold rounded" aria-label="Prodesk IT Homepage">
+                <!-- REPLACE WITH REAL ASSET: inline SVG standing in for the logo mark -->
+                <svg class="w-10 h-10 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 64 64" aria-hidden="true">
+                    <rect width="64" height="64" rx="14" fill="#0B0F19"/>
+                    <text x="32" y="44" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="800" fill="#F4C542" text-anchor="middle">P</text>
+                </svg>
+                <div class="flex flex-col">
+                    <span class="font-heading font-extrabold text-xl tracking-tight logo-text">PRODESK IT</span>
+                    <span class="text-[9px] uppercase tracking-widest text-gold font-semibold">Engineering Services</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+                <a href="#home" data-nav class="text-sm font-medium hover:text-gold transition-colors nav-link active-nav">Home</a>
+                <a href="#about" data-nav class="text-sm font-medium hover:text-gold transition-colors nav-link text-mutedText">About</a>
+                <a href="#services" data-nav class="text-sm font-medium hover:text-gold transition-colors nav-link text-mutedText">Services</a>
+                <a href="#industries" data-nav class="text-sm font-medium hover:text-gold transition-colors nav-link text-mutedText">Industries</a>
+                <a href="#contact" data-nav class="text-sm font-medium hover:text-gold transition-colors nav-link text-mutedText">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-full border border-white/10 hover:bg-white/5 transition-colors text-gold" aria-label="Toggle dark/light mode" aria-pressed="false">
+                    <i class="fa-solid fa-moon text-lg" id="theme-icon" aria-hidden="true"></i>
+                </button>
+                <a href="#contact" class="bg-gold text-bgDark px-5 py-2.5 rounded text-sm font-semibold hover:scale-105 transition-transform shadow-lg shadow-gold/20">Book Consultation</a>
+            </div>
+
+            <!-- Mobile Actions -->
+            <div class="flex items-center gap-3 md:hidden">
+                <button id="theme-toggle-mobile" class="p-2 rounded-full border border-white/10 text-gold" aria-label="Toggle dark/light mode" aria-pressed="false">
+                    <i class="fa-solid fa-moon text-lg" id="theme-icon-mobile" aria-hidden="true"></i>
+                </button>
+                <button id="menu-btn" class="text-white p-2 focus:outline-none mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropout Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-bgDark/95 border-b border-white/10 flex flex-col p-6 space-y-4 backdrop-blur-lg">
+            <a href="#home" class="mobile-link text-lg font-medium text-white">Home</a>
+            <a href="#about" class="mobile-link text-lg font-medium text-mutedText">About</a>
+            <a href="#services" class="mobile-link text-lg font-medium text-mutedText">Services</a>
+            <a href="#industries" class="mobile-link text-lg font-medium text-mutedText">Industries</a>
+            <a href="#contact" class="mobile-link text-lg font-medium text-mutedText">Contact</a>
+            <a href="#contact" class="mobile-link bg-gold text-bgDark block text-center py-3 rounded font-semibold">Book Consultation</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center z-10 space-y-8 reveal">
+            <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-medium tracking-wide uppercase text-gold">
+                <span class="w-2 h-2 rounded-full bg-gold animate-ping" aria-hidden="true"></span> Enterprise Grade Solutions
+            </div>
+            <h1 class="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-tight text-white">
+                Engineering the Future of <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-white to-accent">Digital Innovation</span>
+            </h1>
+            <p class="text-mutedText max-w-2xl mx-auto text-base sm:text-xl font-normal leading-relaxed">
+                We help businesses accelerate growth through AI-powered software solutions, cloud infrastructure, and engineering excellence.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#services" class="w-full sm:w-auto bg-gold text-bgDark px-8 py-4 rounded font-semibold text-base hover:scale-105 transition-transform shadow-xl shadow-gold/20 flex items-center justify-center gap-2">
+                    Get Started <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto bg-white/5 border border-white/10 hover:bg-white/10 text-white border-btn px-8 py-4 rounded font-semibold text-base transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto relative">
+        <div class="text-center mb-16 reveal">
+            <h2 class="font-heading font-extrabold text-3xl sm:text-5xl mb-4 text-white">Our Core Expertise</h2>
+            <p class="text-mutedText max-w-xl mx-auto">Tailored high-end digital services scaled to optimize performance, agility, and business operations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:-translate-y-2 transition-all duration-300 group reveal">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-bgDark transition-all duration-300">
+                    <i class="fa-solid fa-code text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3 text-white">Software Development</h3>
+                <p class="text-mutedText text-sm leading-relaxed">Custom high-performance web and mobile enterprise applications executed with clean architecture.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:-translate-y-2 transition-all duration-300 group reveal">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-bgDark transition-all duration-300">
+                    <i class="fa-solid fa-cloud text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3 text-white">Cloud &amp; DevOps</h3>
+                <p class="text-mutedText text-sm leading-relaxed">Scalable, ironclad automated cloud infrastructure deployments ensuring continuous uptime.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:-translate-y-2 transition-all duration-300 group reveal">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-bgDark transition-all duration-300">
+                    <i class="fa-solid fa-brain text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3 text-white">AI &amp; Automation</h3>
+                <p class="text-mutedText text-sm leading-relaxed">Intelligent data engines and workflows built to drastically reduce operational overhead costs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-gradient-to-b from-transparent to-white/[0.01]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative group reveal">
+                <div class="absolute -inset-1 bg-gradient-to-r from-gold to-accent rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000" aria-hidden="true"></div>
+                <!-- REPLACE WITH REAL ASSET: swap this panel for an <img> of your HQ/team -->
+                <div class="relative rounded-2xl w-full h-[450px] shadow-2xl about-panel" role="img" aria-label="Prodesk IT engineering team workspace">
+                    <i class="fa-solid fa-server text-6xl" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="space-y-8 reveal">
+                <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-white">Engineered for Scale, Built for Trust</h2>
+                <p class="text-mutedText leading-relaxed">
+                    At Prodesk IT, we fuse cutting-edge system engineering with breakthrough digital transformation methodologies. For over half a decade, our multidisciplinary teams have partnered with tier-one entities to deploy hyper-secure, scalable software foundations across complex regulatory landscapes.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="border-l-2 border-gold pl-4">
+                        <span class="block font-heading font-extrabold text-3xl text-white stat-num">50+</span>
+                        <span class="text-xs uppercase tracking-wider text-mutedText">Projects Delivered</span>
+                    </div>
+                    <div class="border-l-2 border-gold pl-4">
+                        <span class="block font-heading font-extrabold text-3xl text-white stat-num">20+</span>
+                        <span class="text-xs uppercase tracking-wider text-mutedText">Enterprise Clients</span>
+                    </div>
+                    <div class="border-l-2 border-gold pl-4">
+                        <span class="block font-heading font-extrabold text-3xl text-white stat-num">99%</span>
+                        <span class="text-xs uppercase tracking-wider text-mutedText">Client Satisfaction</span>
+                    </div>
+                    <div class="border-l-2 border-gold pl-4">
+                        <span class="block font-heading font-extrabold text-3xl text-white stat-num">5+</span>
+                        <span class="text-xs uppercase tracking-wider text-mutedText">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="font-heading font-extrabold text-3xl sm:text-5xl mb-4 text-white">Industries We Empower</h2>
+            <p class="text-mutedText max-w-xl mx-auto">Providing cross-functional deep technical insight to power ecosystems worldwide.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="p-6 border border-white/5 bg-white/[0.01] rounded-xl text-center hover:bg-white/[0.03] transition-all reveal industry-card">
+                <i class="fa-solid fa-heart-pulse text-2xl text-gold mb-3 block" aria-hidden="true"></i>
+                <span class="font-medium text-sm text-white">Healthcare</span>
+            </div>
+            <div class="p-6 border border-white/5 bg-white/[0.01] rounded-xl text-center hover:bg-white/[0.03] transition-all reveal industry-card">
+                <i class="fa-solid fa-landmark text-2xl text-gold mb-3 block" aria-hidden="true"></i>
+                <span class="font-medium text-sm text-white">Finance</span>
+            </div>
+            <div class="p-6 border border-white/5 bg-white/[0.01] rounded-xl text-center hover:bg-white/[0.03] transition-all reveal industry-card">
+                <i class="fa-solid fa-industry text-2xl text-gold mb-3 block" aria-hidden="true"></i>
+                <span class="font-medium text-sm text-white">Manufacturing</span>
+            </div>
+            <div class="p-6 border border-white/5 bg-white/[0.01] rounded-xl text-center hover:bg-white/[0.03] transition-all reveal industry-card">
+                <i class="fa-solid fa-basket-shopping text-2xl text-gold mb-3 block" aria-hidden="true"></i>
+                <span class="font-medium text-sm text-white">Retail</span>
+            </div>
+            <div class="p-6 border border-white/5 bg-white/[0.01] rounded-xl text-center hover:bg-white/[0.03] transition-all reveal industry-card">
+                <i class="fa-solid fa-truck-ramp-box text-2xl text-gold mb-3 block" aria-hidden="true"></i>
+                <span class="font-medium text-sm text-white">Logistics</span>
+            </div>
+            <div class="p-6 border border-white/5 bg-white/[0.01] rounded-xl text-center hover:bg-white/[0.03] transition-all reveal industry-card">
+                <i class="fa-solid fa-graduation-cap text-2xl text-gold mb-3 block" aria-hidden="true"></i>
+                <span class="font-medium text-sm text-white">Education</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="py-24 px-6 bg-white/[0.01] border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading font-extrabold text-3xl sm:text-5xl mb-4 text-white">Why Market Leaders Choose Us</h2>
+                <p class="text-mutedText max-w-xl mx-auto">Engineered frameworks configured to sustain high performance under enterprise stress variables.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 border border-white/10 rounded-xl bg-bgDark/40 relative overflow-hidden group reveal why-card">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gold" aria-hidden="true"></div>
+                    <h3 class="font-heading font-bold text-lg mb-2 text-white">Expert Engineers</h3>
+                    <p class="text-mutedText text-xs leading-relaxed">Staffed exclusively by elite senior tier developers who manage your systems directly.</p>
+                </div>
+                <div class="p-6 border border-white/10 rounded-xl bg-bgDark/40 relative overflow-hidden group reveal why-card">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gold" aria-hidden="true"></div>
+                    <h3 class="font-heading font-bold text-lg mb-2 text-white">AI-Driven Solutions</h3>
+                    <p class="text-mutedText text-xs leading-relaxed">Infusing artificial intelligence patterns to aggressively streamline internal metrics.</p>
+                </div>
+                <div class="p-6 border border-white/10 rounded-xl bg-bgDark/40 relative overflow-hidden group reveal why-card">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gold" aria-hidden="true"></div>
+                    <h3 class="font-heading font-bold text-lg mb-2 text-white">Enterprise Security</h3>
+                    <p class="text-mutedText text-xs leading-relaxed">Zero-trust architecture schemas deployed into every asset code cluster we ship.</p>
+                </div>
+                <div class="p-6 border border-white/10 rounded-xl bg-bgDark/40 relative overflow-hidden group reveal why-card">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gold" aria-hidden="true"></div>
+                    <h3 class="font-heading font-bold text-lg mb-2 text-white">Scalable Architecture</h3>
+                    <p class="text-mutedText text-xs leading-relaxed">Built cleanly on modular microservices designed to scale exponentially with enterprise user growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="font-heading font-extrabold text-3xl sm:text-5xl mb-4 text-white">Enterprise Endorsements</h2>
+            <p class="text-mutedText max-w-xl mx-auto">Hear how technology executives and industry operations leads scale with Prodesk IT.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <blockquote class="glass-card p-8 rounded-2xl border border-white/5 bg-white/[0.02] flex flex-col justify-between reveal">
+                <p class="text-mutedText italic text-sm leading-relaxed">"Prodesk IT rebuilt our central logistics orchestration framework completely. Systems throughput grew instantly by 40% with zero structural friction down the pipeline."</p>
+                <footer class="mt-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-bold text-gold text-sm" aria-hidden="true">AM</div>
+                    <div>
+                        <cite class="font-bold text-sm text-white not-italic block">Alexander Miller</cite>
+                        <span class="text-xs text-mutedText">VP of Infrastructure, LogiTech Global</span>
+                    </div>
+                </footer>
+            </blockquote>
+            <blockquote class="glass-card p-8 rounded-2xl border border-white/5 bg-white/[0.02] flex flex-col justify-between reveal">
+                <p class="text-mutedText italic text-sm leading-relaxed">"Their technical depth in cloud infrastructure migrations under strict compliance controls was exemplary. Absolute professionals."</p>
+                <footer class="mt-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-bold text-gold text-sm" aria-hidden="true">SR</div>
+                    <div>
+                        <cite class="font-bold text-sm text-white not-italic block">Sarah Jenkins</cite>
+                        <span class="text-xs text-mutedText">Chief Information Officer, Apex FinTech</span>
+                    </div>
+                </footer>
+            </blockquote>
+            <blockquote class="glass-card p-8 rounded-2xl border border-white/5 bg-white/[0.02] flex flex-col justify-between reveal">
+                <p class="text-mutedText italic text-sm leading-relaxed">"Deploying the customized automated predictive models built by Prodesk cut our operational validation timeline routines in half."</p>
+                <footer class="mt-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-bold text-gold text-sm" aria-hidden="true">DV</div>
+                    <div>
+                        <cite class="font-bold text-sm text-white not-italic block">David Vance</cite>
+                        <span class="text-xs text-mutedText">Director of Technology, MedCore Labs</span>
+                    </div>
+                </footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto glass-card border border-white/10 p-12 rounded-3xl text-center relative z-10 reveal">
+            <div class="absolute -top-24 -left-24 w-48 h-48 bg-gold/10 rounded-full blur-3xl" aria-hidden="true"></div>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-5xl mb-4 text-white">Ready to Transform Your Business?</h2>
+            <p class="text-mutedText max-w-lg mx-auto mb-8 text-sm sm:text-base">Connect directly with our senior software engineering staff to formulate an optimized system design plan for your enterprise operations.</p>
+            <a href="mailto:info@prodeskit.com?subject=Free%20Consultation%20Request" class="inline-block bg-gold text-bgDark px-8 py-4 rounded font-semibold hover:scale-105 transition-transform shadow-xl shadow-gold/20">
+                Schedule a Free Consultation
+            </a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-bgDark pt-16 pb-8 px-6 text-xs text-mutedText">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6" viewBox="0 0 64 64" aria-hidden="true">
+                        <rect width="64" height="64" rx="14" fill="#F4C542"/>
+                        <text x="32" y="44" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="800" fill="#0B0F19" text-anchor="middle">P</text>
+                    </svg>
+                    <span class="font-heading font-extrabold text-white text-base tracking-tight footer-logo">PRODESK IT</span>
+                </div>
+                <p class="leading-relaxed">Premium enterprise application engineering, cloud infrastructure deployment, and digital transformational processes tailored for market leadership ecosystems.</p>
+            </div>
+            <div>
+                <h4 class="font-heading font-bold text-white uppercase tracking-wider mb-4 text-xs footer-head">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-gold transition-colors">About</a></li>
+                    <li><a href="#services" class="hover:text-gold transition-colors">Services</a></li>
+                    <li><a href="#industries" class="hover:text-gold transition-colors">Industries</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading font-bold text-white uppercase tracking-wider mb-4 text-xs footer-head">Contact Information</h4>
+                <ul class="space-y-2 text-mutedText">
+                    <li><span class="text-white footer-sub font-medium">Email:</span> <a href="mailto:info@prodeskit.com" class="hover:text-gold transition-colors">info@prodeskit.com</a></li>
+                    <li><span class="text-white footer-sub font-medium">Phone:</span> <a href="tel:+18005550199" class="hover:text-gold transition-colors">+1 (800) 555-0199</a></li>
+                    <li><span class="text-white footer-sub font-medium">Address:</span> 100 Innovation Way, Suite 400, Tech City</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading font-bold text-white uppercase tracking-wider mb-4 text-xs footer-head">Connect With Us</h4>
+                <div class="flex gap-4 text-lg">
+                    <a href="#" aria-label="LinkedIn Profile" class="hover:text-gold transition-colors"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="X Twitter Profile" class="hover:text-gold transition-colors"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="GitHub Repository" class="hover:text-gold transition-colors"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span>&copy; <span id="copyright-year">2026</span> Prodesk IT. All rights reserved. Engineering services executed globally.</span>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Dark / Light Theme Toggle System ---
+    // Note: the actual theme class is applied by an inline script in <head>
+    // *before* this file loads, so there is no flash of the wrong theme.
+    // This block only needs to sync the icons/buttons and handle clicks.
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
+    const htmlElement = document.documentElement;
+
+    function safeSetItem(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (e) {
+            // localStorage can throw in private browsing / restricted contexts.
+            // The site still works, it just won't remember the choice.
+            console.warn('Could not persist theme preference:', e);
+        }
+    }
+
+    function applyTheme(theme) {
+        htmlElement.classList.remove('light', 'dark');
+        htmlElement.classList.add(theme);
+
+        const iconClass = theme === 'light' ? 'fa-solid fa-sun text-lg' : 'fa-solid fa-moon text-lg';
+        if (themeIcon) themeIcon.className = iconClass;
+        if (themeIconMobile) themeIconMobile.className = iconClass;
+        if (themeToggleBtn) themeToggleBtn.setAttribute('aria-pressed', String(theme === 'light'));
+        if (themeToggleMobileBtn) themeToggleMobileBtn.setAttribute('aria-pressed', String(theme === 'light'));
+    }
+
+    // Sync icons with whichever theme the head script already applied.
+    applyTheme(htmlElement.classList.contains('light') ? 'light' : 'dark');
+
+    function toggleTheme() {
+        const nextTheme = htmlElement.classList.contains('light') ? 'dark' : 'light';
+        safeSetItem('prodesk-theme', nextTheme);
+        applyTheme(nextTheme);
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+    if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
+
+    // --- Mobile Navigation Controller ---
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('.mobile-link') : [];
+
+    function openMobileMenu() {
+        mobileMenu.classList.remove('hidden');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        menuBtn.querySelector('i').className = 'fa-solid fa-xmark text-2xl';
+        const firstLink = mobileMenu.querySelector('.mobile-link');
+        if (firstLink) firstLink.focus();
+    }
+
+    function closeMobileMenu({ returnFocus = false } = {}) {
+        if (mobileMenu.classList.contains('hidden')) return;
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.querySelector('i').className = 'fa-solid fa-bars text-2xl';
+        if (returnFocus) menuBtn.focus();
+    }
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+            isOpen ? closeMobileMenu() : openMobileMenu();
+        });
+
+        mobileLinks.forEach(link => link.addEventListener('click', () => closeMobileMenu()));
+
+        // Close on outside click
+        document.addEventListener('click', (event) => {
+            const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+            if (!isOpen) return;
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close on Escape, return focus to the toggle button
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+                closeMobileMenu({ returnFocus: true });
+            }
+        });
+    }
+
+    // --- Sticky Header Controller ---
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('navbar-scrolled', window.scrollY > 40);
+        }, { passive: true });
+    }
+
+    // --- Scroll Reveal Performance Engine ---
+    const revealElements = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: '0px 0px -40px 0px'
+        });
+        revealElements.forEach(element => revealObserver.observe(element));
+    } else {
+        // No IntersectionObserver support: just show everything immediately.
+        revealElements.forEach(element => element.classList.add('active'));
+    }
+
+    // --- Scrollspy: highlight the nav link for the section in view ---
+    const navLinks = document.querySelectorAll('[data-nav]');
+    const sections = Array.from(navLinks)
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    if ('IntersectionObserver' in window && sections.length) {
+        const spyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(link => {
+                    const isActive = link.getAttribute('href') === `#${entry.target.id}`;
+                    link.classList.toggle('active-nav', isActive);
+                    link.classList.toggle('text-mutedText', !isActive);
+                });
+            });
+        }, {
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0
+        });
+        sections.forEach(section => spyObserver.observe(section));
+    }
+
+    // --- Auto-updating copyright year ---
+    const yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+});
+
+    </script>
+</body>
+</html>

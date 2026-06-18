@@ -1,0 +1,178 @@
+/* Core Settings */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Respect users who have asked their OS to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link (keyboard accessibility) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: #F4C542;
+  color: #05070D;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Visible keyboard focus everywhere interactive */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #F4C542;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Premium Card Glassmorphism Engine */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card:hover {
+  border-color: rgba(244, 197, 66, 0.3);
+  box-shadow: 0 20px 40px -15px rgba(5, 7, 13, 0.7), 0 0 30px 0 rgba(244, 197, 66, 0.05);
+}
+
+/* About-section placeholder panel (stands in until a real photo is supplied) */
+.about-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(244, 197, 66, 0.18), transparent 55%),
+    linear-gradient(135deg, #11162a 0%, #0B0F19 60%, #05070D 100%);
+  color: rgba(244, 197, 66, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Scroll Active Reveals */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigation State Scrolling */
+.navbar-scrolled {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  background: rgba(5, 7, 13, 0.85) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ==========================================================================
+   LIGHT MODE DEFINITIONS (Explicit Override Framework)
+   ========================================================================== */
+html.light {
+  background-color: #F8FAFC !important;
+}
+html.light body {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+/* Header Adjustments */
+html.light header {
+  background: rgba(248, 250, 252, 0.8) !important;
+  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+}
+html.light .navbar-scrolled {
+  background: rgba(248, 250, 252, 0.95) !important;
+}
+html.light .logo-text,
+html.light .mobile-menu-toggle {
+  color: #0F172A !important;
+}
+html.light .nav-link {
+  color: #475569 !important;
+}
+html.light .nav-link:hover {
+  color: #F4C542 !important;
+}
+html.light .active-nav {
+  color: #0F172A !important;
+}
+/* Typography Overrides */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light .text-white,
+html.light .stat-num,
+html.light .industry-card span,
+html.light .why-card h3 {
+  color: #0F172A !important;
+}
+html.light .text-mutedText {
+  color: #475569 !important;
+}
+/* Card Elements Overrides */
+html.light .glass-card,
+html.light .industry-card,
+html.light .why-card {
+  background: rgba(15, 23, 42, 0.02) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+}
+html.light .glass-card:hover {
+  background: rgba(15, 23, 42, 0.03) !important;
+  border-color: rgba(244, 197, 66, 0.5) !important;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08) !important;
+}
+html.light .why-card {
+  background: #FFFFFF !important;
+}
+html.light .about-panel {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(244, 197, 66, 0.25), transparent 55%),
+    linear-gradient(135deg, #EEF2F7 0%, #E2E8F0 100%) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  color: rgba(15, 23, 42, 0.25) !important;
+}
+html.light .border-btn {
+  border-color: rgba(15, 23, 42, 0.15) !important;
+  color: #0F172A !important;
+}
+html.light .border-btn:hover {
+  background: rgba(15, 23, 42, 0.05) !important;
+}
+/* Footer Contrast Lock */
+html.light footer {
+  background-color: #0B0F19 !important;
+  border-top-color: transparent !important;
+}
+html.light footer p,
+html.light footer span,
+html.light footer a {
+  color: #AAB3C5 !important;
+}
+html.light footer a:hover {
+  color: #F4C542 !important;
+}
+html.light .footer-logo,
+html.light .footer-head,
+html.light .footer-sub {
+  color: #FFFFFF !important;
+}
