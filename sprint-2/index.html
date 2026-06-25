@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cash-Flow</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">₹</span>
+        <span class="logo-text">Cash<span class="logo-accent">Flow</span></span>
+      </div>
+      <div class="header-right">
+        <select id="currencySelect" class="currency-select">
+          <option value="INR">₹ INR</option>
+          <option value="USD">$ USD</option>
+          <option value="EUR">€ EUR</option>
+          <option value="GBP">£ GBP</option>
+        </select>
+        <button id="downloadPdf" class="btn btn-outline">⬇ PDF Report</button>
+        <button id="resetBtn" class="btn btn-danger">↺ Reset</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- WARNING BANNER -->
+  <div id="warningBanner" class="warning-banner hidden">
+    ⚠ Warning: Your remaining balance has dropped below 10% of your salary. Consider reviewing your expenses.
+  </div>
+
+  <main class="main">
+
+    <!-- SALARY SECTION -->
+    <section class="card salary-card">
+      <h2 class="section-title">Set Monthly Salary</h2>
+      <div class="input-row">
+        <input type="number" id="salaryInput" class="input" placeholder="Enter salary amount" min="0" />
+        <button id="setSalary" class="btn btn-primary">Set Salary</button>
+      </div>
+      <p id="salaryError" class="error-msg hidden"></p>
+    </section>
+
+    <!-- SUMMARY CARDS -->
+    <section class="summary-grid">
+      <div class="summary-card">
+        <p class="summary-label">Total Salary</p>
+        <p class="summary-value" id="displaySalary">—</p>
+      </div>
+      <div class="summary-card">
+        <p class="summary-label">Total Expenses</p>
+        <p class="summary-value" id="displayExpenses">—</p>
+      </div>
+      <div class="summary-card">
+        <p class="summary-label">Remaining Balance</p>
+        <p class="summary-value" id="displayBalance">—</p>
+      </div>
+    </section>
+
+    <!-- CHART + EXPENSE FORM -->
+    <div class="grid-two">
+
+      <!-- EXPENSE FORM -->
+      <section class="card">
+        <h2 class="section-title">Add Expense</h2>
+        <div class="form-group">
+          <label class="label" for="expenseName">Expense Name</label>
+          <input type="text" id="expenseName" class="input" placeholder="e.g. Rent, Groceries" />
+        </div>
+        <div class="form-group">
+          <label class="label" for="expenseAmount">Amount</label>
+          <input type="number" id="expenseAmount" class="input" placeholder="Enter amount" min="0" />
+        </div>
+        <p id="expenseError" class="error-msg hidden"></p>
+        <button id="addExpense" class="btn btn-primary full-width">Add Expense</button>
+
+        <!-- EXPENSE LIST -->
+        <div class="expense-list-wrapper">
+          <h3 class="list-title">Expense Log</h3>
+          <ul id="expenseList" class="expense-list">
+            <li class="empty-state" id="emptyState">No expenses added yet.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CHART -->
+      <section class="card chart-card">
+        <h2 class="section-title">Breakdown</h2>
+        <div class="chart-wrapper">
+          <canvas id="pieChart"></canvas>
+        </div>
+        <p class="chart-hint" id="chartHint">Set a salary to see your breakdown.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Cash-Flow · Personal Finance Dashboard</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
