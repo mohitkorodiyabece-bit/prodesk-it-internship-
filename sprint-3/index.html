@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Station</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="weather-default">
+  <div class="scene" id="scene" aria-hidden="true">
+    <div class="scene-sun"></div>
+    <div class="scene-cloud c1"></div>
+    <div class="scene-cloud c2"></div>
+    <div class="scene-cloud c3"></div>
+    <div class="scene-rain" id="sceneRain"></div>
+    <div class="scene-snow" id="sceneSnow"></div>
+    <div class="scene-stars" id="sceneStars"></div>
+    <div class="scene-fog"></div>
+    <div class="scene-flash" id="sceneFlash"></div>
+  </div>
+  <main class="weather-card">
+    <header class="card-header">
+      <p class="eyebrow">Weather Station</p>
+      <span class="status-dot" id="statusDot" aria-hidden="true"></span>
+    </header>
+
+    <form class="search-row" id="searchForm" autocomplete="off">
+      <label class="sr-only" for="cityInput">City name</label>
+      <input type="text" id="cityInput" placeholder="Search a city…" autocomplete="off">
+      <button type="button" id="locateBtn" class="icon-btn" aria-label="Use my location" title="Use my location">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
+      </button>
+      <button type="submit" id="searchBtn" class="icon-btn primary" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      </button>
+    </form>
+
+    <p id="errorMessage" class="error-message hidden" role="alert"></p>
+
+    <section id="loadingState" class="loading-state hidden" aria-hidden="true">
+      <span class="spinner"></span>
+      <p>Reading the sky…</p>
+    </section>
+
+    <section id="weatherData" class="weather-display hidden" aria-live="polite">
+      <div class="dial" id="weatherIcon"></div>
+      <p class="reading" id="temperature">--°</p>
+      <h2 class="city" id="cityName">—</h2>
+      <p class="condition" id="condition">—</p>
+      <p class="updated">Updated <span id="updatedAt">—</span></p>
+
+      <div class="tiles" id="tiles" role="group" aria-label="Additional conditions">
+        <button type="button" class="tile" id="tileFeelsLike" data-metric="feelsLike">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13.5V5a2 2 0 1 1 4 0v8.5a4 4 0 1 1-4 0Z"></path></svg>
+          <span class="tile-label">Feels like</span>
+          <span class="tile-value" id="feelsLikeValue">--°</span>
+        </button>
+        <button type="button" class="tile" id="tileWind" data-metric="wind">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a2.5 2.5 0 1 0-2.4-3.2M3 16h14a2.5 2.5 0 1 1-2.4 3.2M3 12h8a2 2 0 1 0-1.9-2.6"></path></svg>
+          <span class="tile-label">Wind</span>
+          <span class="tile-value" id="windValue">-- km/h</span>
+        </button>
+        <button type="button" class="tile" id="tileHumidity" data-metric="humidity">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2s6 6.6 6 11.1a6 6 0 1 1-12 0c0-4.5 6-11.1 6-11.1Z"></path></svg>
+          <span class="tile-label">Humidity</span>
+          <span class="tile-value" id="humidity">--%</span>
+        </button>
+        <button type="button" class="tile" id="tileAir" data-metric="air">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h11a2.3 2.3 0 1 0-2.2-3M4 12h13.5a2.3 2.3 0 1 1-2.2 3M4 17h9a2.3 2.3 0 1 0-2.2 3"></path></svg>
+          <span class="tile-label">Air quality</span>
+          <span class="tile-value" id="airValue">--</span>
+        </button>
+      </div>
+
+      <p class="tile-detail hidden" id="tileDetail" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
