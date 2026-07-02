@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Cover Letter Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+        <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">AI Cover Letter Generator</span>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#generator" class="nav-link">Generator</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+        <a href="#generator" class="btn btn-primary btn-sm">Generate Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+        <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-content reveal">
+        <p class="eyebrow">✦ Powered by AI</p>
+        <h1 class="hero-title">
+          Generate Professional <span class="gradient-text">Cover Letters</span> with AI
+        </h1>
+        <p class="hero-subtitle">
+          Turn your resume and a few details into a polished, personalized cover letter
+          in seconds. No writer's block, no blank page — just results that get you noticed.
+        </p>
+        <div class="hero-actions">
+          <a href="#generator" class="btn btn-primary btn-lg">Start Generating</a>
+          <button class="btn btn-ghost btn-lg" id="exploreTemplatesHeroBtn" type="button">🎨 Explore Templates</button>
+        </div>
+      </div>
+
+      <div class="hero-illustration reveal">
+        <div class="doc-card doc-card-back"></div>
+        <div class="doc-card doc-card-front">
+          <div class="doc-line doc-line-title"></div>
+          <div class="doc-line"></div>
+          <div class="doc-line"></div>
+          <div class="doc-line short"></div>
+          <div class="doc-line"></div>
+          <div class="doc-line"></div>
+          <div class="doc-line short"></div>
+          <div class="doc-badge">✓ AI Generated</div>
+        </div>
+        <div class="floating-chip chip-1">⚡ Instant</div>
+        <div class="floating-chip chip-2">🎯 Tailored</div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+        <section class="features" id="features">
+    <div class="section-inner">
+      <p class="eyebrow center">✦ Why choose us</p>
+      <h2 class="section-title center">Everything you need to stand out</h2>
+      <p class="section-subtitle center">
+        Built for job seekers who want quality letters without spending hours writing them.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Powered</h3>
+          <p>Advanced language generation crafts a unique letter tailored to your role, company, and skills.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">📄</div>
+          <h3>Professional Templates</h3>
+          <p>Every letter follows a clean, recruiter-approved structure that reads naturally and professionally.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">📋</div>
+          <h3>One Click Copy</h3>
+          <p>Copy your finished cover letter to the clipboard instantly and paste it wherever you need it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        <section class="generator" id="generator">
+    <div class="section-inner">
+      <p class="eyebrow center">✦ Try it now</p>
+      <h2 class="section-title center">Build your cover letter</h2>
+      <p class="section-subtitle center">Fill in your details below and let the AI do the writing.</p>
+
+      <div class="generator-grid">
+
+                <form class="glass-card generator-form" id="generatorForm" novalidate>
+
+                    <div class="template-selector">
+            <div class="template-selector-info">
+              <span class="template-selector-label">Template</span>
+              <span class="template-selector-value" id="selectedTemplateName">Modern</span>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" id="changeTemplateBtn">🎨 Explore Templates</button>
+          </div>
+
+          <div class="form-group">
+            <label for="candidateName">👤 Candidate Name</label>
+            <input type="text" id="candidateName" name="candidateName" placeholder="e.g. Priya Sharma" autocomplete="name" />
+            <span class="error-msg" id="err-candidateName">Please enter your name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="jobRole">💼 Job Role</label>
+            <input type="text" id="jobRole" name="jobRole" placeholder="e.g. Frontend Developer" />
+            <span class="error-msg" id="err-jobRole">Please enter the job role.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="targetCompany">🏢 Target Company</label>
+            <input type="text" id="targetCompany" name="targetCompany" placeholder="e.g. Nimbus Technologies" />
+            <span class="error-msg" id="err-targetCompany">Please enter the target company.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="keySkills">🛠️ Key Skills</label>
+            <textarea id="keySkills" name="keySkills" rows="4" placeholder="e.g. JavaScript, UI Design, Team Leadership"></textarea>
+            <span class="error-msg" id="err-keySkills">Please list at least one skill.</span>
+          </div>
+
+                    <div class="form-group">
+            <label for="resumeUpload">📎 Upload Resume (PDF only, optional)</label>
+            <div class="file-drop" id="fileDrop">
+              <input type="file" id="resumeUpload" name="resumeUpload" accept="application/pdf" />
+              <span id="fileDropText">Click or drag a PDF here</span>
+            </div>
+            <span class="hint-msg" id="resumeStatus"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="generateBtn">
+            <span class="btn-spinner" id="btnSpinner"></span>
+            <span id="btnLabel">Generate Cover Letter</span>
+          </button>
+        </form>
+
+                <div class="glass-card output-card">
+          <div class="output-header">
+            <h3>Your Cover Letter</h3>
+            <div class="output-header-meta">
+              <span class="template-badge" id="outputTemplateBadge">Modern</span>
+              <span class="char-count" id="charCount">0 characters</span>
+            </div>
+          </div>
+
+          <div class="output-body" id="outputBody">
+            <p class="output-placeholder" id="outputPlaceholder">
+              Your generated cover letter will appear here once you fill in the form and click
+              <strong>Generate Cover Letter</strong>.
+            </p>
+            <div class="letter-doc" id="letterDoc" hidden>
+              <div class="letter-meta">
+                <span class="letter-meta-name" id="letterMetaName"></span>
+                <span class="letter-meta-date" id="letterMetaDate"></span>
+              </div>
+              <div class="output-text" id="outputText"></div>
+            </div>
+          </div>
+
+          <div class="output-actions">
+            <button class="btn btn-secondary btn-sm" id="copyBtn" disabled>📋 Copy to Clipboard</button>
+            <button class="btn btn-ghost btn-sm" id="clearBtn" disabled>🗑️ Clear</button>
+          </div>
+          <span class="copied-toast" id="copiedToast">Copied!</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+        <section class="about" id="about">
+    <div class="section-inner about-inner">
+      <div class="reveal">
+        <p class="eyebrow">✦ About</p>
+        <h2 class="section-title">Job hunting shouldn't start with a blank page</h2>
+        <p class="about-text">
+          AI Cover Letter Generator helps you skip the intimidating first draft. Enter a few
+          details about the role you want, and get a clean, professional starting point you
+          can refine and send with confidence — built for speed without sacrificing quality.
+        </p>
+      </div>
+    </div>
+  </section>
+
+        <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">✦</span>
+        <span>AI Cover Letter Generator</span>
+      </div>
+      <p class="footer-text">Crafted to help you land the interview. &copy; 2026 AI Cover Letter Generator.</p>
+    </div>
+  </footer>
+
+        <div class="template-modal" id="templateModal" aria-hidden="true">
+    <div class="template-modal-backdrop" id="templateModalBackdrop"></div>
+    <div class="template-modal-panel" role="dialog" aria-modal="true" aria-labelledby="templateModalTitle">
+      <button class="template-modal-close" id="templateModalClose" aria-label="Close template gallery">✕</button>
+      <div class="template-modal-header">
+        <p class="eyebrow">✦ Templates</p>
+        <h3 id="templateModalTitle">Explore Cover Letter Templates</h3>
+        <p>Preview each style and apply it instantly to your generated letter.</p>
+      </div>
+      <div class="template-grid" id="templateGrid">
+              </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
