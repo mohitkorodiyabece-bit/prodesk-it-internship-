@@ -1,0 +1,20 @@
+{
+  "name": "the-data-hub",
+  "version": "1.0.0",
+  "description": "The Data Hub - a RESTful API for managing blog posts, built with Express.js and in-memory storage.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "rest-api",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
