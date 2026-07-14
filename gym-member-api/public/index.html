@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Member Management Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="app-header">
+    <h1>Gym Member Management</h1>
+    <p class="app-subtitle">Manage gym members digitally</p>
+  </header>
+
+  <main id="main-content">
+    <section class="panel" aria-labelledby="form-heading">
+      <h2 id="form-heading">Member Details</h2>
+      <form id="member-form" novalidate>
+        <input type="hidden" id="member-id" name="id" value="" />
+
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error" />
+          <p class="field-error" id="name-error" role="alert"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" />
+          <p class="field-error" id="email-error" role="alert"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-error" />
+          <p class="field-error" id="phone-error" role="alert"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="membershipType">Membership type</label>
+          <select id="membershipType" name="membershipType" aria-describedby="membershipType-error">
+            <option value="">Select a membership type</option>
+            <option value="Basic">Basic</option>
+            <option value="Standard">Standard</option>
+            <option value="Premium">Premium</option>
+          </select>
+          <p class="field-error" id="membershipType-error" role="alert"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="joiningDate">Joining date</label>
+          <input type="date" id="joiningDate" name="joiningDate" aria-describedby="joiningDate-error" />
+          <p class="field-error" id="joiningDate-error" role="alert"></p>
+        </div>
+
+        <div class="form-group form-group-checkbox">
+          <input type="checkbox" id="isActive" name="isActive" checked />
+          <label for="isActive">Active member</label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Add member</button>
+          <button type="button" id="cancel-edit-btn" class="btn-secondary" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="list-heading">
+      <div class="list-heading-row">
+        <h2 id="list-heading">Members</h2>
+        <p class="member-count" id="member-count">0 members</p>
+      </div>
+
+      <div class="filters">
+        <div class="form-group">
+          <label for="search-input">Search members</label>
+          <input
+            type="search"
+            id="search-input"
+            name="search"
+            placeholder="Search by name, email, phone, or membership type"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="filter-membership-type">Filter by membership type</label>
+          <select id="filter-membership-type" name="filterMembershipType">
+            <option value="">All membership types</option>
+            <option value="Basic">Basic</option>
+            <option value="Standard">Standard</option>
+            <option value="Premium">Premium</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="filter-active-status">Filter by active status</label>
+          <select id="filter-active-status" name="filterActiveStatus">
+            <option value="">All members</option>
+            <option value="true">Active only</option>
+            <option value="false">Inactive only</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="loading-indicator" class="loading-indicator" aria-live="polite" hidden>Loading members...</p>
+      <p id="empty-state" class="empty-state" hidden>No data found</p>
+
+      <div class="table-wrapper">
+        <table id="members-table" class="members-table">
+          <caption class="visually-hidden">List of gym members</caption>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Membership</th>
+              <th scope="col">Joined</th>
+              <th scope="col">Status</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="members-table-body"></tbody>
+        </table>
+      </div>
+
+      <ul id="members-cards" class="members-cards"></ul>
+    </section>
+  </main>
+
+  <div id="notification-region" aria-live="assertive" class="notification-region"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
