@@ -1,14 +1,31 @@
 const mongoose = require("mongoose");
 
-// Connects to MongoDB Atlas using the URI from environment variables
+let connectionPromise = null;
+
 const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI);
-    console.log(`MongoDB connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.error(`MongoDB connection failed: ${error.message}`);
-    process.exit(1);
+  // Already connected
+  if (mongoose.connection.readyState === 1) {
+    return mongoose.connection;
   }
+
+  // Reuse an existing connection attempt
+  if (!connectionPromise) {
+    connectionPromise = mongoose
+      .connect(process.env.MONGODB_URI, {
+        serverSelectionTimeoutMS: 10000,
+      })
+      .then((connection) => {
+        console.log(`MongoDB connected: ${connection.connection.host}`);
+        return connection;
+      })
+      .catch((error) => {
+        connectionPromise = null;
+        console.error("MongoDB connection failed:", error.message);
+        throw error;
+      });
+  }
+
+  return connectionPromise;
 };
 
 module.exports = connectDB;
