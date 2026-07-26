@@ -2,6 +2,7 @@
 const cors = require("cors");
 const morgan = require("morgan");
 
+const connectDB = require("./config/db");
 const postRoutes = require("./routes/postRoutes");
 const notFoundMiddleware = require("./middleware/notFoundMiddleware");
 const errorMiddleware = require("./middleware/errorMiddleware");
@@ -33,6 +34,19 @@ app.get("/api/health", (req, res) => {
     message: "Server is healthy",
     timestamp: new Date().toISOString(),
   });
+});
+
+/*
+ * Vercel may execute app.js directly instead of server.js.
+ * Therefore, connect to MongoDB before running post routes.
+ */
+app.use("/api/posts", async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    next(error);
+  }
 });
 
 app.use("/api/posts", postRoutes);
