@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const http = require("http");
-const createApp = require("./app");
+const createApp = require("./createApp");
 const initializeSocket = require("./config/socket");
 
 const PORT = Number(process.env.PORT) || 5000;
@@ -13,7 +13,6 @@ const server = http.createServer(app);
 
 initializeSocket(server, CLIENT_URL);
 
-// Start the server normally during local development.
 if (require.main === module) {
   server.listen(PORT, () => {
     console.log(
@@ -25,5 +24,4 @@ if (require.main === module) {
   });
 }
 
-// Export the HTTP server so Vercel can handle it.
 module.exports = server;
